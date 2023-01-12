@@ -1,8 +1,8 @@
 package web.controller;
 
 import hiber.model.Car;
-import hiber.service.UserService;
-import hiber.service.UserServiceimpl;
+import hiber.service.CarService;
+import hiber.service.CarServiceimpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class CarController {
 
     @GetMapping(value = "/cars")
     public String printCars(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
-        UserService userService = new UserServiceimpl();
+        CarService userService = new CarServiceimpl();
         if (count >= 5){
             count = 5;
         }

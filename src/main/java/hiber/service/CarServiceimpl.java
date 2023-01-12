@@ -1,7 +1,7 @@
 package hiber.service;
 
-import hiber.dao.UserDao;
-import hiber.dao.UserDaoimpl;
+import hiber.dao.CarDao;
+import hiber.dao.CarDaoimpl;
 import hiber.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,24 +9,24 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceimpl implements UserService {
+public class CarServiceimpl implements CarService {
 
     @Autowired
-    private UserDao userDao;
+    private CarDao carDao;
 
     public void add(Car car) {
-        userDao.add(car);
+        carDao.add(car);
     }
 
     public List<Car> listCar() {
-        return userDao.listCar();
+        return carDao.listCar();
     }
 
     @Override
-    public List<Car> createCar() { return userDao.createCar(); }
+    public List<Car> createCar() { return carDao.createCar(); }
 
     public List<Car> carList(int count) {
-        UserDao userDao1 = new UserDaoimpl();
-        return userDao1.carList(count);
+        CarDao carDao1 = new CarDaoimpl();
+        return carDao1.carList(count);
     }
 }

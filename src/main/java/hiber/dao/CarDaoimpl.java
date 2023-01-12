@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoimpl implements UserDao {
+public class CarDaoimpl implements CarDao {
 
     private SessionFactory sessionFactory;
 

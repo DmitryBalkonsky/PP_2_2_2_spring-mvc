@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cars List</title>
+    <title>ТАЧКИ на прокачку</title>
 </head>
 <body>
-<table border="1">
-
+<table th:border="1" th:if="${not #lists.isEmpty(cars)}">
     <tr>
+        <th>Series</th>
         <th>Model</th>
         <th>Color</th>
-        <th>Serial Num</th>
     </tr>
 
-    <tr th:each = "car : ${carList}">
-        <td th:utext="${car.carModel}">
-        <td th:utext="${car.color}"/>
-        <td th:utext="${car.serialNum}"/>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.getSeries()}">VALUE</td>
+        <td th:text="${car.getModel()}">VALUE</td>
+        <td th:text="${car.getColor()}">VALUE</td>
     </tr>
-
 </table>
+
+<div th:if="${#lists.isEmpty(cars)}">
+    <h2>Ну как это должно работать?</h2>
+</div>
 </body>
-</html>
+</html>html>
