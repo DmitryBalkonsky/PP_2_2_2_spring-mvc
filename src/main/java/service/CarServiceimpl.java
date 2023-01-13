@@ -1,9 +1,8 @@
-package hiber.service;
+package service;
 
-import hiber.model.Car;
+import model.Car;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

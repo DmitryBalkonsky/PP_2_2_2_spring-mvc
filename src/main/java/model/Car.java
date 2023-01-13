@@ -1,7 +1,4 @@
-package hiber.model;
-
-
-import jakarta.persistence.*;
+package model;
 
 
 public class Car {

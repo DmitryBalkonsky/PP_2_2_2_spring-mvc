@@ -1,8 +1,8 @@
 package web.controller;
 
-import hiber.model.Car;
-import hiber.service.CarService;
-import hiber.service.CarServiceimpl;
+import model.Car;
+import service.CarService;
+import service.CarServiceimpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;

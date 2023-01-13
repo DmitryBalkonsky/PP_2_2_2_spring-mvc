@@ -1,7 +1,7 @@
-package hiber.config;
+package config;
 
 
-import hiber.model.Car;
+import model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
