@@ -13,12 +13,15 @@ public class CarServiceimpl implements CarService {
 
     private SessionFactory sessionFactory;
 
+
     public void add(Car car) { sessionFactory.getCurrentSession().save(car); }
 
+    @Override
     public List<Car> listCar() {
         TypedQuery<Car> query = sessionFactory.getCurrentSession().createQuery("from Car");
         return query.getResultList();
     }
+
 
     @Override
     public List<Car> createCar() {
